@@ -40,7 +40,8 @@ int main()
         if(message == "q") break;
 
         /* 5文字送信 */
-        write(sock, message.c_str(), message.length());
+        // send(sock, message.c_str(), message.length(), 0);
+        send(sock, message.c_str(), message.length(), 0);
     }
 
     /* socketの終了 */
